@@ -10,17 +10,14 @@ import cards from '../../json/db.json'
 export default function Inicio() {
     return (
         <>
-            <Banner imagem='home' />
-            <Titulo><h1>Um lugar para guardar seus vídeos e filmes!</h1></Titulo>
+            <Banner imagem="home" />
+            <Titulo>
+                <h1>Um lugar para guardar seus vídeos e filmes!</h1>
+            </Titulo>
             <section className={styles.container}>
-                {cards.length > 0 && cards.map((card) => (
-                    <Cards
-                        key={card.id}
-                        titulo={card.titulo}
-                        capa={card.capa}
-                        link={card.link}
-                    />
-                ))}
+                {cards.map((card) => {
+                    return <Cards {...card} key={card.id} />
+                })}
             </section>
         </>
     )
