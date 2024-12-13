@@ -10,7 +10,6 @@ import cards from '../../json/db.json'
 export default function Inicio() {
     return (
         <>
-            <Cabecalho />
             <Banner imagem='home' />
             <Titulo><h1>Um lugar para guardar seus vídeos e filmes!</h1></Titulo>
             <section className={styles.container}>
@@ -23,9 +22,6 @@ export default function Inicio() {
                     />
                 ))}
             </section>
-
-
-            <Rodape />
         </>
     )
 }
